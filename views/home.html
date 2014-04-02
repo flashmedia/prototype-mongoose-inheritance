@@ -1,0 +1,13 @@
+{{> partials/header.html}}
+<h1>Users</h1>
+{{#users}}
+  {{> partials/user.html}}
+{{/users}}
+
+{{^users}}
+  <p>There are no users.</p>
+{{/users}}
+
+<p><a href="/user/create">Create user</a></p>
+
+{{> partials/footer.html}}
