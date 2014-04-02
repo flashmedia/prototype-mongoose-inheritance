@@ -4,7 +4,7 @@ module.exports = function(req, res){
   mongoose.model('User').find(
     function (err, users) {
       if (err) return console.error(err);
-      res.render('home', { pageTitle: 'Mini Twitter', users: users });
+      res.render('home', { pageTitle: 'Prototype Mongoose Inheritance', users: users });
     }
   );
 };

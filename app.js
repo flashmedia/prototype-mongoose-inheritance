@@ -6,6 +6,7 @@ var express = require('express'),
     path = require('path'),
     routes = require('./lib/load')('./routes/'),
     mongoose = require('mongoose'),
+    middleware = require('./lib/load')('./middleware/'),
     app = express();
 
 require('./models/user');
@@ -23,6 +24,9 @@ app.use(bodyParser.urlencoded());
 app.use(app.router);
 
 app.get('/', routes.home);
+app.get('/user/create', routes.usercreate);
+app.post('/user/create', middleware.usercreate, routes.usersaved);
+app.get('/user/:username', routes.user);
 
 var server = app.listen(3001, function() {
     if (process.env.NODE_ENV !== 'production') console.log('Listening on port %s', server.address().port);

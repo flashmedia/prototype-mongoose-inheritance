@@ -7,7 +7,6 @@
     "express": "3.4.8",
     "mu2": "0.5.20",
     "mongoose": "3.8.8",
-    "body-parser": "~1.0.0",
-    "bcrypt": "0.7.7"
+    "body-parser": "~1.0.0"
   }
 }

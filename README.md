@@ -1,6 +1,6 @@
-# Mini Twitter
+# Prototype Mongoose Inheritance Testing
 
-This is a simple application used for learning node.js and express.js framework.
+This is a simple application to test out the mongoose inheritance using dicrimnator.
 
 ## Setup
 
