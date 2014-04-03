@@ -2,7 +2,7 @@ module.exports = function (req, res, next) {
 
     var mongoose = require('mongoose'),
         User = mongoose.model('User'),
-        Manager = mongoose.model('Manager');
+        Manager = require('../models/manager');
 
 
     if(req.body.user.bManager){

@@ -15,7 +15,4 @@ function BaseSchema() {
 util.inherits(BaseSchema, mongoose.Schema);
 
 var UserSchema = new BaseSchema();
-var ManagerSchema = new BaseSchema({ department: String });
-
-var Person = mongoose.model('User', UserSchema);
-var Boss = Person.discriminator('Manager', ManagerSchema);
+var User = mongoose.model('User', UserSchema);
